@@ -56,19 +56,43 @@ ul.graph li.percent80
 {
 	background: "graph80.jpg" repeat-y 80% 0;
 }
-</style>
+</style><script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['HTML',     11],
+          ['JAVA',      2],
+          ['CSS',  2],
+          ['PDF', 2],
+          ['OTHER',    7]
+        ]);
+
+        var options = {
+          title: 'ABOUT EXTERNAL LINKS'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body style="margin: 0px; padding: 0px; font-family: 'Trebuchet MS',verdana;" background="http://2.bp.blogspot.com/-0k3Xq96cDvw/TrzpRF4R1jI/AAAAAAAAA94/bh15WnGUCAk/s1600/Download+Wallpaper+Picture+Gambar+Fhoto+Windows+8+Terbaru+%25281%2529.png"
 ><img style="display: inline;" src="http://vitainteract.com/wp-content/uploads/Digital-marketing.png" alt="logo" >
   <h1 style="display: inline;"><center><b> <font face="Bradley Hand ITC" color="#A50000" size="7">PASSPORT_INDIA-OPTIMIZATION</font></b></center></h1>
-<hr><h1><font face="Bradley Hand ITC" color="#A50000" size="3">ABOUT INTERNAL DATA</font></h1><ul class="graph">
+<hr><h1 style="display: inline;"><font face="Bradley Hand ITC" color="#A50000" size="3">ABOUT INTERNAL DATA</font></h1><ul class="graph">
 	<li class="percent20">32.42%-html</li>
 	<li class="percent40">0.25%-css</li>
 	<li class="percent60">23.44%-pdf</li>
 	<li class="percent80">0.00%-javascript</li>
 	<li class="percent100">5.75%-images</li>
 	<li class="percent100">37.66%-other</li>
-</ul>
+</ul><div style="display: inline;" id="piechart" style="width: 900px; height: 500px;"></div>
 <hr><center>
 <table border="6">
 <tr>
